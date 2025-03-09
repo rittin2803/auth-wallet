@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 30% 98%; /* Soft off-white background */
+    --foreground: 230 10% 12%; /* Dark charcoal text */
+    --card: 240 40% 96%; /* Very light gray for cards */
+    --card-foreground: 230 15% 15%; /* Neutral dark text for cards */
+    --popover: 240 40% 96%; /* Matches card background */
+    --popover-foreground: 230 15% 15%; /* Matches card foreground */
+    --primary: 280 75% 55%; /* Neon purple for primary actions */
+    --primary-foreground: 0 0% 100%; /* Pure white for text on primary */
+    --secondary: 210 60% 90%; /* Soft sky blue for secondary */
+    --secondary-foreground: 230 20% 15%; /* Dark text for secondary */
+    --muted: 240 5% 85%; /* Subtle muted background */
+    --muted-foreground: 240 8% 50%; /* Light gray for muted text */
+    --accent: 45 95% 55%; /* Neon orange for accents */
+    --accent-foreground: 0 0% 100%; /* White for accent text */
+    --destructive: 0 80% 50%; /* Bright red for destructive actions */
+    --destructive-foreground: 0 0% 100%; /* White for destructive text */
+    --border: 240 5% 75%; /* Light gray for borders */
+    --input: 240 5% 75%; /* Matches border for inputs */
+    --ring: 280 75% 55%; /* Neon purple focus ring */
+    --chart-1: 200 90% 45%; /* Aqua blue for charts */
+    --chart-2: 140 80% 50%; /* Bright green for charts */
+    --chart-3: 45 95% 55%; /* Neon orange for charts */
+    --chart-4: 320 85% 60%; /* Vibrant pink for charts */
+    --chart-5: 0 75% 65%; /* Bold red for charts */
+    --radius: 1rem; /* Larger border radius for rounded elements */
+  }
+
+  .dark {
+    --background: 230 10% 10%; /* Deep charcoal for dark mode */
+    --foreground: 240 90% 95%; /* Soft white for readability */
+    --card: 230 15% 15%; /* Dark gray for cards */
+    --card-foreground: 240 90% 95%; /* Matches foreground */
+    --popover: 230 15% 15%; /* Matches card */
+    --popover-foreground: 240 90% 95%; /* Matches foreground */
+    --primary: 280 85% 70%; /* Bright neon purple for primary */
+    --primary-foreground: 230 10% 10%; /* Dark text for contrast */
+    --secondary: 210 30% 25%; /* Subtle navy blue for secondary */
+    --secondary-foreground: 240 85% 95%; /* Soft white for secondary */
+    --muted: 230 12% 15%; /* Muted dark background */
+    --muted-foreground: 240 15% 75%; /* Light gray for muted text */
+    --accent: 45 90% 60%; /* Vibrant neon orange for accents */
+    --accent-foreground: 230 10% 10%; /* Dark text for accents */
+    --destructive: 0 65% 45%; /* Deep red for destructive actions */
+    --destructive-foreground: 240 90% 95%; /* Soft white on destructive */
+    --border: 230 20% 20%; /* Dark border color */
+    --input: 230 20% 20%; /* Matches border for inputs */
+    --ring: 280 85% 70%; /* Bright neon purple for focus rings */
+    --chart-1: 200 80% 55%; /* Bright aqua blue for charts */
+    --chart-2: 140 70% 50%; /* Rich green for charts */
+    --chart-3: 45 90% 60%; /* Vibrant neon orange for charts */
+    --chart-4: 320 80% 65%; /* Vibrant pink for charts */
+    --chart-5: 0 75% 55%; /* Bold red for charts */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
