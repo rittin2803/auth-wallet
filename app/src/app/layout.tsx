@@ -17,8 +17,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "CryptVerify",
-  description: "This is CryptVerify",
+  title: "AuthWallet 2.5",
+  description: "This is AuthWallet 2.5",
 };
 
 export default function RootLayout({

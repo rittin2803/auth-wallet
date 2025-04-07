@@ -1,7 +1,10 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
-
 import "@nomicfoundation/hardhat-verify";
+import * as dotenv from "dotenv";
+
+// Load environment variables
+dotenv.config();
 
 import { defaultSignerPrivateKey } from "./key";
 
@@ -25,8 +28,20 @@ const config: HardhatUserConfig = {
     },
   },
   etherscan: {
-    apiKey:
-      process.env.ETHERSCAN_API_KEY || "BS56RJPCFREESF68WMCV487FT3VII2QZQT",
+    apiKey: {
+      "base-sepolia": process.env.BASE_API_KEY || "",
+      "optimism-sepolia": process.env.ETHERSCAN_API_KEY || "BS56RJPCFREESF68WMCV487FT3VII2QZQT",
+    },
+    customChains: [
+      {
+        network: "base-sepolia",
+        chainId: 84532,
+        urls: {
+          apiURL: "https://api-sepolia.basescan.org/api",
+          browserURL: "https://sepolia.basescan.org"
+        }
+      }
+    ]
   },
 };
 

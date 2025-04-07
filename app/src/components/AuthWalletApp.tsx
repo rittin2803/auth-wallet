@@ -131,9 +131,8 @@ export const AuthWalletApp = () => {
     }
   };
 
-  const functionUrl = "https://functions.chain.link/base-sepolia/170";
-  const automateUrl =
-    "https://automation.chain.link/base-sepolia/92567105130128017370582699532272670870390868578143540381853552263646221229564";
+  const functionUrl = "https://functions.chain.link/base-sepolia/4558";
+  const automationUrl = "https://automation.chain.link/base-sepolia/1099904432";
   const certUrl = "https://www.googleapis.com/oauth2/v3/certs";
 
   const schemaIdWithType = "onchain_evm_84532_0x27e";
@@ -203,7 +202,7 @@ export const AuthWalletApp = () => {
           >
             <Wallet className="text-indigo-600 mr-2" size={24} />
             <h1 className="text-2xl font-bold text-indigo-600">
-              CryptVerify
+              AuthWallet 2.5
             </h1>
           </div>
           <ConnectButton
@@ -283,12 +282,12 @@ export const AuthWalletApp = () => {
                     <Label>Chainlink Automation URL:</Label>
                     <div className="text-xs lg:text-sm break-all">
                       <a
-                        href={automateUrl}
+                        href={automationUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-600 hover:underline"
                       >
-                        {automateUrl}
+                        {automationUrl}
                       </a>
                     </div>
                   </div>
@@ -460,7 +459,7 @@ export const AuthWalletApp = () => {
                   Test Omni Execution
                 </Button>
                 <p className="text-sm text-gray-600 font-semibold">
-                  CryptVerify contracts are deployed omnichain, allowing
+                  AuthWallet 2.5 contracts are deployed omnichain, allowing
                   users to maintain the same wallet address across multiple
                   chains, meaning they are onboarded to all EVM chains
                   simultaneously without any action. Our omnichain execution
@@ -492,7 +491,7 @@ export const AuthWalletApp = () => {
             >
               <Wallet className="inline-block text-indigo-600 mb-6" size={80} />
               <h1 className="text-5xl font-bold text-indigo-600 mb-6">
-                CryptVerify
+                AuthWallet 2.5
               </h1>
               <p className="max-w-3xl mx-auto text-2xl text-gray-700">
                 Simplifying Wallet Management with OAuth2.0, OpenID Connect,
@@ -522,7 +521,7 @@ export const AuthWalletApp = () => {
                     icon: Lightbulb,
                     title: "The Need for Simplicity",
                     description:
-                      "A secure and user-friendly wallet solution is desperately needed. This is where CryptVerify steps in to bridge the gap.",
+                      "A secure and user-friendly wallet solution is desperately needed. This is where AuthWallet 2.5 steps in to bridge the gap.",
                   },
                 ].map((item, index) => (
                   <motion.div
@@ -569,7 +568,7 @@ export const AuthWalletApp = () => {
               <Card className="bg-white/90 backdrop-blur-sm shadow-lg overflow-hidden">
                 <CardContent className="p-6">
                   <h3 className="text-2xl font-semibold text-indigo-600 mb-4">
-                    CryptVerify
+                    AuthWallet 2.5
                   </h3>
                   <div className="relative aspect-video">
                     <img
@@ -620,7 +619,8 @@ export const AuthWalletApp = () => {
                     Ready to Experience the Future of Wallet Management?
                   </h3>
                   <p className="mb-6 text-indigo-100">
-                    Connect your wallet and start your journey with CryptVerify today!
+                    Connect your wallet and start your journey with AuthWallet
+                    2.5 today!
                   </p>
                   <Button
                     onClick={handleConnect}
@@ -643,7 +643,7 @@ export const AuthWalletApp = () => {
               rel="noopener noreferrer"
               className="text-indigo-600 hover:underline"
             >
-              {/* View on GitHub */}
+              View on GitHub
             </a>
           </p>
         </div>

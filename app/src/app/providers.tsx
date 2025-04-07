@@ -22,7 +22,7 @@ const connectors = connectorsForWallets(
     },
   ],
   {
-    appName: "CryptVerify Sandbox",
+    appName: "AuthWallet 2.5 Sandbox",
     projectId,
   },
 );
