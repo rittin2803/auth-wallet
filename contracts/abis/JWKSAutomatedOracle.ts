@@ -290,4 +290,11 @@ export const JWKSAutomatedOracle = [
     stateMutability: "view",
     type: "function",
   },
+  {
+    inputs: [],
+    name: "triggerJWKSFetch",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
 ] as const;

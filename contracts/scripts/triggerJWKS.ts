@@ -12,11 +12,11 @@ async function main() {
     signer
   );
 
-  console.log("Triggering JWKS data fetch...");
-  const tx = await jwksOracle.performUpkeep("0x");
+  console.log("Triggering JWKS fetch...");
+  const tx = await jwksOracle.triggerJWKSFetch();
   console.log("Transaction hash:", tx.hash);
   await tx.wait();
-  console.log("Transaction confirmed!");
+  console.log("JWKS fetch completed!");
 }
 
 main().catch((error) => {

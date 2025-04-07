@@ -11,12 +11,13 @@ export const main = async () => {
   const JWKSAutomatedOracle = await ethers.getContractFactory(
     "JWKSAutomatedOracle"
   );
-  const { data } = await JWKSAutomatedOracle.getDeployTransaction(
+  const constructorArgs = [
     baseSepoliaChainlinkConfig.router,
     baseSepoliaChainlinkConfig.donId,
-    baseSepoliaChainlinkConfig.subscriptionId,
-    baseSepoliaChainlinkConfig.gasLimit
-  );
+    "301",
+    baseSepoliaChainlinkConfig.gasLimit,
+  ];
+  const { data } = await JWKSAutomatedOracle.getDeployTransaction(...constructorArgs);
   const saltHash = ethers.keccak256(salt);
   const initCodeHash = ethers.keccak256(data);
   const computedAddress = await createX[

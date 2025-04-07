@@ -131,7 +131,7 @@ export const AuthWalletApp = () => {
     }
   };
 
-  const functionUrl = "https://functions.chain.link/base-sepolia/4558";
+  const functionUrl = "https://functions.chain.link/base-sepolia/301";
   const automationUrl = "https://automation.chain.link/base-sepolia/1099904432";
   const certUrl = "https://www.googleapis.com/oauth2/v3/certs";
 
@@ -202,7 +202,7 @@ export const AuthWalletApp = () => {
           >
             <Wallet className="text-indigo-600 mr-2" size={24} />
             <h1 className="text-2xl font-bold text-indigo-600">
-              AuthWallet 2.5
+              CryptVerify
             </h1>
           </div>
           <ConnectButton
@@ -491,7 +491,7 @@ export const AuthWalletApp = () => {
             >
               <Wallet className="inline-block text-indigo-600 mb-6" size={80} />
               <h1 className="text-5xl font-bold text-indigo-600 mb-6">
-                AuthWallet 2.5
+                CryptVerify
               </h1>
               <p className="max-w-3xl mx-auto text-2xl text-gray-700">
                 Simplifying Wallet Management with OAuth2.0, OpenID Connect,
@@ -619,8 +619,8 @@ export const AuthWalletApp = () => {
                     Ready to Experience the Future of Wallet Management?
                   </h3>
                   <p className="mb-6 text-indigo-100">
-                    Connect your wallet and start your journey with AuthWallet
-                    2.5 today!
+                    Connect your wallet and start your journey with CryptVerify
+                    today!
                   </p>
                   <Button
                     onClick={handleConnect}
@@ -636,16 +636,7 @@ export const AuthWalletApp = () => {
       </main>
       <footer className="bg-white shadow-sm mt-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center text-gray-600">
-          <p className="mt-2">
-            <a
-              href="https://github.com/taijusanagi/auth-wallet"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-indigo-600 hover:underline"
-            >
-              View on GitHub
-            </a>
-          </p>
+          <p>© 2024 CryptVerify. All rights reserved.</p>
         </div>
       </footer>
       {showJWKSImage && (

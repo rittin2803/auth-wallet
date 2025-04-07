@@ -9,7 +9,7 @@ import {FunctionsRequest} from "@chainlink/contracts/src/v0.8/functions/v1_0_0/l
 
 import {AutomationCompatibleInterface} from "@chainlink/contracts/src/v0.8/automation/AutomationCompatible.sol";
 
-contract JWKSAutomatedOracle is FunctionsClient, AutomationCompatibleInterface {
+contract JWKSAutomatedOracle is FunctionsClient, ConfirmedOwner, AutomationCompatibleInterface {
     using FunctionsRequest for FunctionsRequest.Request;
 
     event ModulusReceived(string indexed kid, bytes modulus);
@@ -58,7 +58,7 @@ contract JWKSAutomatedOracle is FunctionsClient, AutomationCompatibleInterface {
         bytes32 _donID,
         uint64 _subscriptionId,
         uint32 _gasLimit
-    ) FunctionsClient(_router) {
+    ) FunctionsClient(_router) ConfirmedOwner(msg.sender) {
         donID = _donID;
         subscriptionId = _subscriptionId;
         gasLimit = _gasLimit;
@@ -119,5 +119,16 @@ contract JWKSAutomatedOracle is FunctionsClient, AutomationCompatibleInterface {
             _requestKid("0");
             _requestKid("1");
         }
+    }
+
+    // Public function to manually trigger JWKS fetch
+    function triggerJWKSFetch() external {
+        _requestKid("0");
+        _requestKid("1");
+    }
+
+    // Function to update subscription ID
+    function setSubscriptionId(uint64 _newSubscriptionId) external onlyOwner {
+        subscriptionId = _newSubscriptionId;
     }
 }
